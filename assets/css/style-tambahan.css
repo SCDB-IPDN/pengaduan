@@ -1,6 +1,6 @@
 section, html, body
 {
-    height: 100%;
+    height: auto;
     font-family: Helvetica;
 }
 
@@ -8,7 +8,53 @@ section
 {
     margin-top: 70px;
     padding: 100px;
+    color: dimgray;
 }
+
+h1
+{
+    font-weight: bold;
+}
+
+.peruntukan
+{
+    margin-top: 0px;
+}
+
+.peruntukan h1
+{
+    text-align: center;
+}
+
+.peruntukan p
+{
+    text-align: center;
+    font-size: 12px;
+}
+
+.tentang
+{
+    text-align: center;
+}
+
+.tentang .col-sm
+{
+    margin: 70px;
+    padding: 20px;
+}
+
+.tentang p
+{
+    font-size: 12px;
+}
+
+.tentang img
+{
+    display: inline-block;
+    align-items: center;
+    width: 65%;
+}
+
 
 .navbar-brand
 {
@@ -26,6 +72,13 @@ section
 .btn-tomato
 {
     background-color: tomato;
+}
+
+.btn-tomato:hover
+{
+    background-color: crimson;
+    transition: 2s;
+    color: white;
 }
 
 .btn-besar
@@ -70,4 +123,19 @@ footer
 {
     background-color: whitesmoke;
     padding: 50px;
+}
+
+
+@media screen and (max-width:900px)
+{
+    section
+    {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .btn-tomato
+    {
+        width: 100%;
+    }
 }

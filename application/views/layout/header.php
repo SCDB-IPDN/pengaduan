@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-bayangan fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-light bg-bayangan fixed-top" id="navbarToggleExternalContent">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?= base_url('') ?>">
         <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Lambang_IPDN.png" alt="Pengaduan IPDN" width="65" height="65"> PENGADUAN
@@ -12,7 +12,7 @@
           <a class="nav-link active" href="#login" data-fancybox="login">Masuk</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Registrasi</a>
+          <a class="nav-link active" href="registrasi">Registrasi</a>
         </li>
       </ul>
     </div>
@@ -41,7 +41,7 @@
         </form>
         </div>
         <div class="col-md-6">
-            <img data-aos="fade-down-right" width="100%" src="assets/img/complaint.png" alt="">
+            <img data-aos="fade-down-right" width="100%" src="assets/img/Login.png" alt="">
         </div>
     </div>
 </div>
