@@ -10,12 +10,12 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                <li><a class="nav-link scrollto" href="#pengguna">Pengguna</a></li>
-                <li><a class="nav-link scrollto " href="#tipe">Tipe</a></li>
-                <li><a class="nav-link scrollto" href="#pricing">Tentang</a></li>
+                <li><a class="nav-link scrollto active" href="home#hero">Home</a></li>
+                <li><a class="nav-link scrollto" href="home#pengguna">Pengguna</a></li>
+                <li><a class="nav-link scrollto " href="home#tipe">Tipe</a></li>
+                <li><a class="nav-link scrollto" href="home#pricing">Tentang</a></li>
                 <li><a class="getstarted scrollto" href="login">Login</a></li>
-                <li><a class="getstarted btn-outline-primary scrollto" href="registrasi">Registrasi</a></li>
+                <li><a class="getstarted scrollto" href="registrasi">Registrasi</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->

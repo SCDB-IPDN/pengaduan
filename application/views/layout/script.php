@@ -1,15 +1,17 @@
-<!--jquery-->
-<script src="<?= base_url('assets/js/jquery.js'); ?>"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/purecounter/purecounter.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-<!--bootstrap-->
-<script src="<?= base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<!-- Template Main JS File -->
+<script src="assets/js/main.js"></script>
 
-<!--aos-->
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<!--fancybox-->
-<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.js"></script>
-
+<!--swal-->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 <!--custom-->
 <script src="<?= base_url('assets/js/script-tambahan.js'); ?>"></script>

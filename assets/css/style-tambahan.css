@@ -1,141 +1,14 @@
-section, html, body
+.padding-2-kolom
 {
-    height: auto;
-    font-family: Helvetica;
-}
-
-section
-{
-    margin-top: 70px;
     padding: 100px;
-    color: dimgray;
 }
 
-h1
+.paddingan
 {
-    font-weight: bold;
+    padding: 100px;
 }
 
-.peruntukan
+.registrasi
 {
-    margin-top: 0px;
-}
-
-.peruntukan h1
-{
-    text-align: center;
-}
-
-.peruntukan p
-{
-    text-align: center;
-    font-size: 12px;
-}
-
-.tentang
-{
-    text-align: center;
-}
-
-.tentang .col-sm
-{
-    margin: 70px;
-    padding: 20px;
-}
-
-.tentang p
-{
-    font-size: 12px;
-}
-
-.tentang img
-{
-    display: inline-block;
-    align-items: center;
-    width: 65%;
-}
-
-
-.navbar-brand
-{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.bg-bayangan
-{
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-}
-
-.btn-tomato
-{
-    background-color: tomato;
-}
-
-.btn-tomato:hover
-{
-    background-color: crimson;
-    transition: 2s;
-    color: white;
-}
-
-.btn-besar
-{
-    font-size: 35px;
-    letter-spacing: 3px;
-    width: 50%;
-}
-
-.btn-besar:hover
-{
-    background-color: orange;
-    transition: 1s;
-}
-
-.btn-bulat
-{
-    border-radius: 30px;
-}
-
-#login
-{
-    display: none;
-    width: 90%;
-}
-
-#login form
-{
-    margin: 50px;
-}
-
-.inputan input
-{
-    width: 100%;
-    border: 0;
-    font-family: Helvetica;
-}
-
-
-
-footer
-{
-    background-color: whitesmoke;
-    padding: 50px;
-}
-
-
-@media screen and (max-width:900px)
-{
-    section
-    {
-        padding: 10px;
-        width: 100%;
-    }
-
-    .btn-tomato
-    {
-        width: 100%;
-    }
+    padding:150px;
 }

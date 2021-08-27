@@ -1,8 +1,34 @@
-<section>
+<section class="registrasi paddingan">
     <div class="container">
-        <h1>Registrasi</h1>
-        <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet dicta quis temporibus minima delectus voluptatibus repellat culpa cupiditate facere illo incidunt placeat quo repellendus sequi beatae, optio libero, quam fugit?
-        </p>
+        <div class="section-title" data-aos="fade-up">
+            <h2>Registrasi</h2>
+            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-md">
+                <form action="<?= base_url('registproses') ?>" method="post" class="php-email-form" style="padding: 20px;">
+                    <div class="mb-3">
+                        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="number" class="form-control" maxlength="15" name="nohp" placeholder="Masukkan No. Handphone Anda" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" name="email" placeholder="ex: namaemail@mail.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <input type="passowrd" class="form-control" name="password" placeholder="Masukkan Password" required>
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md">
+                <img class="img-fluid" src="assets/img/Regist.png" alt="">
+            </div>
+        </div>
+
     </div>
 </section>
