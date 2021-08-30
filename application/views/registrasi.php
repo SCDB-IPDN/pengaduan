@@ -6,8 +6,8 @@
         </div>
         
         <div class="row">
-            <div class="col-md">
-                <form action="<?= base_url('registproses') ?>" method="post" class="php-email-form" style="padding: 20px;">
+            <div data-aos="fade-right" class="col-md">
+                <form action="<?= base_url('registproses') ?>" method="post" class="bayangan" style="padding: 30px;">
                     <div class="mb-3">
                         <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Anda" required>
                     </div>
@@ -18,15 +18,15 @@
                         <input type="email" class="form-control" name="email" placeholder="ex: namaemail@mail.com" required>
                     </div>
                     <div class="mb-3">
-                        <input type="passowrd" class="form-control" name="password" placeholder="Masukkan Password" required>
+                        <input type="password" class="form-control" name="password" placeholder="Masukkan Password" required>
                     </div>
                     <div class="mb-3">
                         <button type="submit" class="btn btn-primary">Daftar</button>
                     </div>
                 </form>
             </div>
-            <div class="col-md">
-                <img class="img-fluid" src="assets/img/Regist.png" alt="">
+            <div class="col-md order-1 order-lg-2 hero-img" data-aos="fade-left" data-aos-delay="200">
+                <img class="img-fluid gambar-lebar" src="assets/img/Regist.png" alt="">
             </div>
         </div>
 

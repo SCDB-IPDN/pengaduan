@@ -14,6 +14,7 @@
                 <li><a class="nav-link scrollto" href="#pengguna">Pengguna</a></li>
                 <li><a class="nav-link scrollto " href="#tipe">Tipe</a></li>
                 <li><a class="nav-link scrollto" href="#pricing">Tentang</a></li>
+                <li><a class="nav-link scrollto" href="lapor">Laporan Anda</a></li>
                 <li><a class="getstarted scrollto" href="login">Login</a></li>
                 <li><a class="getstarted btn-outline-primary scrollto" href="registrasi">Registrasi</a></li>
             </ul>

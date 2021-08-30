@@ -79,25 +79,23 @@
 
          <div class="container">
              <div class="row">
-                 <div class="col-md padding-2-kolom" data-aos="fade-left">
+                 <div class="col-md paddingan" data-aos="fade-left">
                      <img class="img-fluid" src="assets/img/Login.png" alt="">
                      <h4>User Login</h4>
                      <p>
                          Anda bisa login untuk mendapatkan balasan dari pihak IPDN dan saling mengomentari.
                      </p>
-                     <center>
-                         <a class="btn btn-tomato btn-bulat btn-lg" href="#">Login Sekarang</a>
-                     </center>
+                     
+                    <a class="btn btn-primary btn-lg" href="#">Login Sekarang</a>
                  </div>
-                 <div class="col-md padding-2-kolom" data-aos="fade-right">
+                 <div class="col-md paddingan" data-aos="fade-right">
                      <img class="img-fluid" src="assets/img/Login.png" alt="">
                      <h4>Umum</h4>
                      <p>
                          Pesan anda masuk, tanpa mendapatkan balasan dari PIHAK IPDN
                      </p>
-                     <center>
-                         <a class="btn btn-tomato btn-bulat btn-lg" href="#">Masukkan Laporan</a>
-                     </center>
+                     
+                    <a class="btn btn-primary btn-lg" href="#">Masukkan Laporan</a>
                  </div>
              </div>
          </div>

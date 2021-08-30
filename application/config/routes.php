@@ -15,5 +15,6 @@ $route['home'] = 'Depan';
 $route['registrasi'] = 'Depan/registrasi';
 $route['pengaduan'] = 'Depan/pengaduan';
 $route['registproses'] = 'Depan/registProses';
+$route['lapor'] = 'Depan/lapor';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

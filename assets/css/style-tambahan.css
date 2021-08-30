@@ -11,4 +11,33 @@
 .registrasi
 {
     padding:150px;
+    background-color: cornflowerblue;
+}
+
+.registrasi .container
+{
+    background-color: white;
+    padding: 35px;
+}
+
+.gambar-lebar
+{
+    width: 85%;
+    display: inline-block;
+    margin: auto;
+}
+
+.bayangan
+{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.laporan
+{
+    width: 65%;
+}
+
+.laporan input
+{
+    padding: 15px;
 }

@@ -49,35 +49,34 @@ class Depan extends CI_Controller {
         {
                 $data['titel'] = 'Sedang diproses';
 
-                $pesanSukses = "
-                 <script>
-                   swal('Berhasil!', 'Registrasi anda sukses!', 'success');
-                   window.location='/home';
-                 </script>
-                ";
-
-                $pesanError = "
-                 <script>
-                   swal('Gagal!', 'Registrasi anda gagal!', 'success');
-                   window.location='/registrasi';
-                 </script>
-                ";
-
-                $post = $this->User_model->userRegist();
-
-                if ($post) 
-                {
-                        $pesanKeluar = $pesanSukses;
-                }
-                else
-                {
-                        $pesanKeluar = $pesanError;
-                }
-
-
-                //$this->load->view('layout/head', $data);
+                $this->load->view("layout/head", $data);
                 $this->load->view('layout/script');
-                $this->load->view($pesanKeluar);
                 
+
+                if ($this->User_model->userRegist()) 
+                {
+                        $data['kondisi']='sukses';
+                }
+                else 
+                {
+                        $data['kondisi']='gagal';
+                }
+
+                
+               // $this->load->view("$pesanKeluar");
+                //redirect(base_url("$hal"));
+                
+                $this->load->view('registPopup', $data);
+        }
+
+        public function lapor()
+	{
+                $data['titel'] = 'Lapor';
+                $this->load->view('layout/head', $data);
+                $this->load->view('layout/header_toform');
+                $this->load->view('lapor');
+                $this->load->view('layout/footer');
+                $this->load->view('layout/script');
+                $this->load->view('layout/foot');
         }
 }
