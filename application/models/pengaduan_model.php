@@ -2,7 +2,7 @@
 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Komentar_Model extends CI_Model
+class Pengaduan_Model extends CI_Model
 {
 
     public $namaTabel = "pengaduan_laporan";
