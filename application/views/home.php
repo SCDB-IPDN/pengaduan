@@ -95,7 +95,7 @@
                          Pesan anda masuk, tanpa mendapatkan balasan dari PIHAK IPDN
                      </p>
                      
-                    <a class="btn btn-primary btn-lg" href="#">Masukkan Laporan</a>
+                    <a class="btn btn-primary btn-lg" href="lapor">Masukkan Laporan</a>
                  </div>
              </div>
          </div>

@@ -69,4 +69,6 @@ class Pengaduan extends CI_Controller {
                 $this->load->view('layout/script');
                 $this->load->view('layout/foot');
         }
+
+       
 }

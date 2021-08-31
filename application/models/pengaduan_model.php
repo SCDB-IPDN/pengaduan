@@ -42,12 +42,28 @@ class Pengaduan_Model extends CI_Model
 
     public function tambahkan()
     {
+        $this->load->model('User_model');
+        $profil = $this->User_model->userProfile();
+        foreach($profil as $p)
+        {
+            $idPengadu = $p->id_pengduser;
+        }
+
+        if ($idPengadu==NULL) 
+        {
+            $pengadu = NULL;
+        }
+        else
+        {
+            $pengadu = $idPengadu;
+        }
         $tgl = date('Y-m-d');
         $isi = array(
             "judul_lap"         => $this->input->post('judul'),
             "isi_lap"           => $this->input->post('isi'),
             "jenis_lap"         => $this->input->post('jenislap'),
-            "tgl_lap"           => $tgl
+            "tgl_lap"           => $tgl,
+            "id_pengduser"      => $pengadu
         );
 
         return $this->db->insert($this->namaTabel, $isi);
@@ -60,23 +76,8 @@ class Pengaduan_Model extends CI_Model
         return $hasil;
     }
 
-    public function hapusKomen($id)
-    {
-        $peraidian = ["id_komentar" => $id];
-        $hasil = $this->db->delete($this->namaTabel);
-        return $hasil;
-    }
-
-    public function ubahin()
-    {
-        $isi = array(
-            "id_komentar"   => $this->input->post('id_komen'),
-            "nama_pengguna" => $this->input->post('nama'),
-            "email"         => $this->input->post('email'),
-            "komentar"      => $this->input->post('komentar')
-        );
-        $peraidian = array("id_komentar"   => $this->input->post('id_komen'));
-        $hasil = $this->db->update($this->namaTabel, $isi, $peraidian);
-        return $hasil;
-    }
+    public function data_aduan($table,$where)
+    {		
+		return $this->db->get_where($table,$where);
+    }	
 }

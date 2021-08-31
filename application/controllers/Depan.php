@@ -3,12 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Depan extends CI_Controller {
 
-
+         
 
         public function __construct()
         {
-          parent :: __construct();
-          $this->load->model('User_model');
+                parent :: __construct();
+                $this->load->model('User_model');
+                $this->load->model('Pengaduan_model');
         }
 
 
@@ -16,7 +17,11 @@ class Depan extends CI_Controller {
 	{
                 $data['titel'] = 'Home';
                 $this->load->view('layout/head', $data);
-                $this->load->view('layout/header');
+                
+                $header = $this->User_model->headerLogin();
+
+                $this->load->view("layout/$header");
+                
                 $this->load->view('home');
                 $this->load->view('layout/footer');
                 $this->load->view('layout/script');
@@ -25,6 +30,11 @@ class Depan extends CI_Controller {
         
         public function registrasi()
 	{
+                $ceksesi = $this->User_model->cek_session();
+                if ($ceksesi==false) 
+                {
+                        redirect('home');
+                }
                 $data['titel'] = 'Registrasi';
                 $this->load->view('layout/head', $data);
                 $this->load->view('layout/header_toform');
@@ -73,8 +83,44 @@ class Depan extends CI_Controller {
 	{
                 $data['titel'] = 'Lapor';
                 $this->load->view('layout/head', $data);
-                $this->load->view('layout/header_toform');
+                
+                $header = $this->User_model->headerLogin();
+
+                $this->load->view("layout/$header");
                 $this->load->view('lapor');
+                $this->load->view('layout/footer');
+                $this->load->view('layout/script');
+                $this->load->view('layout/foot');
+        }
+
+        public function laporan()
+	{
+                $data['titel'] = 'Laporan';
+                $this->load->view('layout/head', $data);
+                
+                $header = $this->User_model->headerLogin();
+
+                $this->load->view("layout/$header");
+                $profil = $this->User_model->userProfile();
+                foreach($profil as $p)
+                {
+                        $idPengadu = $p->id_pengduser;
+                }
+                $kriteria = ['id_pengduser' => $idPengadu];
+                $aduan = $this->Pengaduan_model->data_aduan('pengaduan_laporan', $kriteria)->result();
+
+                if (empty($aduan)) 
+                {
+                        $this->load->view('laporan-kosong');
+                }
+                else
+                {       
+                        $data['isi'] = $aduan;
+                        $this->load->view('laporan-terisi', $data);
+                }
+
+                
+                //$this->load->view($section, $isi);
                 $this->load->view('layout/footer');
                 $this->load->view('layout/script');
                 $this->load->view('layout/foot');
