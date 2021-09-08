@@ -93,6 +93,36 @@ class Depan extends CI_Controller {
                 $this->load->view('layout/foot');
         }
 
+        public function laporan_detail($id)
+	{
+                $data['titel'] = 'Detail Laporan';
+                $data['idkomen'] = $this->Pengaduan_model->ambilIdPenglap($id)->result();
+                $this->load->view('layout/head', $data);
+                
+                $header = $this->User_model->headerLogin();
+
+                $this->load->view('layout/'.$header);
+                $this->load->view('laporan-detail', $data);
+                $this->load->view('layout/footer');
+                $this->load->view('layout/script');
+                $this->load->view('layout/foot');
+        }
+
+
+        public function lapor_user()
+	{
+                $data['titel'] = 'Lapor';
+                $this->load->view('layout/head', $data);
+                
+                $header = $this->User_model->headerLogin();
+
+                $this->load->view("layout/$header");
+                $this->load->view('lapor-user');
+                $this->load->view('layout/footer');
+                $this->load->view('layout/script');
+                $this->load->view('layout/foot');
+        }
+
         public function laporan()
 	{
                 $data['titel'] = 'Laporan';
@@ -125,4 +155,6 @@ class Depan extends CI_Controller {
                 $this->load->view('layout/script');
                 $this->load->view('layout/foot');
         }
+
+
 }

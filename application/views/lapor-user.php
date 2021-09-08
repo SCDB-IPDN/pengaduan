@@ -6,15 +6,8 @@
         </div>
 
 
-        <form data-aos="fade-up" action="<?= base_url('laporproses') ?>" method="post" style="padding: 30px;">
+        <form data-aos="fade-up" action="<?= base_url('laporprosesuser') ?>" method="post" style="padding: 30px;">
            
-            <div class="mb-3">
-                <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Anda" required>
-            </div>
-
-            <div class="mb-3">
-                <input type="number" class="form-control" name="nohp" placeholder="Masukkan No. Handphone Anda" required>
-            </div>
 
             <div class="mb-3">
                 <input type="text" class="form-control" name="judul" placeholder="Masukkan Judul Laporan Anda" required>

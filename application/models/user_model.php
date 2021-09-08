@@ -19,6 +19,8 @@ class User_model extends CI_Model {
         return $this->db->insert($this->namaTabel, $isi);
     }
 
+    
+
     public function cek_login($table,$where)
     {		
 		return $this->db->get_where($table,$where);

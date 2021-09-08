@@ -14,5 +14,9 @@
 <!--swal-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+<!--datatables-->
+
+<script src="<?= base_url('') ?>assets/vendor/DataTables/DataTables-1.11.1/js/jquery.dataTables.min.js"></script>
+<script src="<?= base_url('') ?>assets/vendor/DataTables/DataTables-1.11.1/js/dataTables.bootstrap5.min.js"></script>
 <!--custom-->
 <script src="<?= base_url('assets/js/script-tambahan.js'); ?>"></script>

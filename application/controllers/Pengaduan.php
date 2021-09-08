@@ -9,6 +9,7 @@ class Pengaduan extends CI_Controller {
         {
           parent :: __construct();
           $this->load->model('Pengaduan_model');
+          $this->load->model('User_model');
         }
 
 
@@ -27,7 +28,17 @@ class Pengaduan extends CI_Controller {
         
         public function postingan()
         {
-            $this->Pengaduan_model->tambahkan();
+                $ceksesi = $this->User_model->cek_session();
+                if ($ceksesi==false) 
+                {
+                  $this->Pengaduan_model->tambahkan();
+                }
+                else
+                {
+                  $this->Pengaduan_model->postNoLogin();
+                }
+
+            
 
            // $data['komentar'] = $this->Komentar_Model->tampilSemua();
             //$this->load->view('komentar/komentar-simpan');
@@ -64,7 +75,7 @@ class Pengaduan extends CI_Controller {
                 $data['titel'] = 'Lapor';
                 $this->load->view('layout/head', $data);
                 $this->load->view('layout/header_toform');
-                $this->load->view('lapor');
+                $this->load->view('lapor', $data);
                 $this->load->view('layout/footer');
                 $this->load->view('layout/script');
                 $this->load->view('layout/foot');

@@ -34,7 +34,7 @@
 
 .laporan
 {
-    width: 65%;
+    width:65%;
 }
 
 .laporan input
@@ -54,5 +54,16 @@
 
 .laporan
 {
-    padding: 200px;
+    padding: 50px;
+}
+
+
+#pertabelan
+{
+    font-size: 12px;
+}
+
+#pertabelan .btn
+{
+    font-size: 12px;
 }

@@ -6,6 +6,7 @@ class Pengaduan_Model extends CI_Model
 {
 
     public $namaTabel = "pengaduan_laporan";
+    public $user = "pengaduan_user";
     /*
         public function aturan(){
             return $isi = 
@@ -48,30 +49,62 @@ class Pengaduan_Model extends CI_Model
         {
             $idPengadu = $p->id_pengduser;
         }
-
-        if ($idPengadu==NULL) 
-        {
-            $pengadu = NULL;
-        }
-        else
-        {
-            $pengadu = $idPengadu;
-        }
+        $pengadu = $idPengadu;
         $tgl = date('Y-m-d');
-        $isi = array(
+        $laporanMasuk = array(
             "judul_lap"         => $this->input->post('judul'),
             "isi_lap"           => $this->input->post('isi'),
             "jenis_lap"         => $this->input->post('jenislap'),
             "tgl_lap"           => $tgl,
             "id_pengduser"      => $pengadu
         );
+        return $this->db->insert($this->namaTabel, $laporanMasuk);
+    }
+        
 
-        return $this->db->insert($this->namaTabel, $isi);
+    public function postNoLogin()
+    {
+        $nama = $this->input->post('nama');
+        $nohp = $this->input->post('nohp');
+        $isi = array(
+            "nama_pengadu" => $nama,
+            "nohp"         => $nohp,
+            "email"        => NULL,
+            "password"     => NULL
+        );
+
+        $this->db->insert($this->user, $isi);  
+
+        $kriteria = array(
+            "nama_pengadu" => $nama,
+            "nohp"         => $nohp
+        );
+
+        $datanya = $this->db->get_where('pengaduan_user',$kriteria);
+        $hasil = $datanya->result();
+
+        foreach ($hasil as $kunci) 
+        {
+            $kunci = get_object_vars($kunci);
+            $idPengadu = $kunci['id_pengduser'];
+        }
+
+        $tgl = date('Y-m-d');
+
+        $laporanMasuk = array(
+            "judul_lap"         => $this->input->post('judul'),
+            "isi_lap"           => $this->input->post('isi'),
+            "jenis_lap"         => $this->input->post('jenislap'),
+            "tgl_lap"           => $tgl,
+            "id_pengduser"      => $idPengadu
+        );
+
+        return $this->db->insert($this->namaTabel, $laporanMasuk);
     }
 
-    public function ambilId($id)
+    public function ambilIdPenglap($id)
     {
-        $peraidian = ["id_komentar" => $id];
+        $peraidian = ["id_penglap" => $id];
         $hasil = $this->db->get_where($this->namaTabel, $peraidian);
         return $hasil;
     }
@@ -80,4 +113,6 @@ class Pengaduan_Model extends CI_Model
     {		
 		return $this->db->get_where($table,$where);
     }	
+
+    
 }

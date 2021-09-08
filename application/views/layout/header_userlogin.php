@@ -10,11 +10,11 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" href="home#hero">Home</a></li>
-                <li><a class="nav-link scrollto active" href="lapor">Tulis Laporan</a></li>
-                <li><a class="nav-link scrollto active" href="laporan">Laporan Anda</a></li>
-                <li><a class="getstarted btn-outline-primary scrollto" href="profil">Profil</a></li>
-                <li><a class="getstarted btn-outline-primary scrollto" href="logout">Logout</a></li>
+                <li><a class="nav-link scrollto active" href="<?= base_url('home#hero') ?>">Home</a></li>
+                <li><a class="nav-link scrollto active" href="<?= base_url('isi_laporan') ?>">Tulis Laporan</a></li>
+                <li><a class="nav-link scrollto active" href="<?= base_url('laporan') ?>">Laporan Anda</a></li>
+                <li><a class="getstarted btn-outline-primary scrollto" href="<?= base_url('profil') ?>">Profil</a></li>
+                <li><a class="getstarted btn-outline-primary scrollto" href="<?= base_url('logout') ?>">Logout</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
